@@ -1,0 +1,114 @@
+.pokemons{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid; /* Lista será em colunas */
+    grid-template-columns: 1fr; /* Cada coluna ocupa uma fração (2 colunas) */
+}
+
+.pokemon {
+    margin: 0.5rem;
+    padding: 0.5rem 0.5rem;
+    color: white;
+    border-radius: 1rem;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pokemon .number{
+    color: black;
+    opacity: .3;
+    text-align: right;
+}
+
+.pokemon .name{
+    text-transform: capitalize; /* transforma primeira letra em maiusculo*/
+}
+.pokemon .detail {
+    display: flex;
+    flex-direction: row;
+    margin: 0.1rem;
+    align-items: center;
+    justify-content: space-between; /* dá espaçamento entre os detalhes e a img */
+}
+
+.pokemon .detail .types{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.pokemon .detail .types .type{
+
+    color: white;
+    padding: .25rem 1rem;
+    margin: .25rem 0;
+    font-size: .825rem;
+    border-radius: 1rem;
+    filter: brightness(1.14);
+
+}
+.pokemon .detail img{
+    max-width: 100%;
+    width: 60px;
+    align-self: flex-end;
+    
+}
+
+.pagination{
+    bottom: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    padding: 5rem;
+    opacity: 70%;
+}
+
+.pagination button{
+    background-color: #6c79db;
+    color: #f1f1f1;
+    border: none;
+    border-radius: 1rem;
+    padding: .75rem 2rem;
+    
+}
+
+.pagination button:hover{
+    background-color: rgb(53, 86, 155);
+}
+
+@media screen and (min-width: 559px) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr ; /* define as colunas*/
+    }
+}
+
+@media screen and (min-width: 780px) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr 1fr 1fr ;
+    }
+}
+
+@media screen and (min-width: 880px) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr 1fr 1fr ;
+    }
+
+}
+
+@media screen and (min-width: 992px) {
+    .content {
+        max-width: 992px;
+        margin: 0 auto;
+        height: auto;
+        padding: 1.5rem;
+        margin: 2rem auto;
+        border-radius: 1rem;
+        
+    }
+}
